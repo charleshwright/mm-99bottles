@@ -1,7 +1,6 @@
 class Bottles
-  def verses (v1, v2)
-    verse(v1)
-    verse(v2)
+  def verses (start, endVerse)
+    verse(start) + "\n" + verse(endVerse)
   end
 
   def verse (bottleCount)
