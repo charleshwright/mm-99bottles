@@ -1,6 +1,16 @@
 class Bottles
+  def song
+    verses(99, 0)
+  end
+
   def verses (start, endVerse)
-    verse(start) + "\n" + verse(endVerse)
+    result = ""
+    while start > endVerse do
+      result += verse(start) + "\n"
+      start += -1
+    end
+    result += verse(endVerse)
+    result
   end
 
   def verse (bottleCount)
